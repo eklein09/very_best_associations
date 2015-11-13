@@ -11,6 +11,17 @@
       <dt>City</dt>
       <dd><%= @neighborhood.city %></dd>
 
+      <dt>Venues</dt>
+      <dd>
+        <ul class="list-group">
+          <% @neighborhood.venues.each do |venue_in_this_neighborhood| %>
+          <li class="list-group-item">
+            <%= venue_in_this_neighborhood.name %>
+          </li>
+          <% end %>
+        </ul>
+      </dd>
+
     </dl>
 
     <div class="btn-group btn-group-justified">
